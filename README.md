@@ -1,6 +1,6 @@
 # Búsqueda Binaria (C++)
 
-Implementación de una clase Grafo para modelar redes de datos y encontrar los caminos más cortos entre sus vertices, sea el grafo dirigido o no dirigido, haciendo uso del algoritmo de búsqueda binaria.
+Implementación del algoritmo de búsqueda binaria, tanto en su versión iterativa como recursiva, utilizando la biblioteca std::vector para el almacenamiento dinámico de datos. A través de un menú de interfaz de línea de comandos (CLI) fácil de usar, los usuarios pueden poblar el arreglo de forma dinámica, el cual ordena los elementos automáticamente para garantizar la precisión de la búsqueda.
 
 ## Características
  
