@@ -1,6 +1,6 @@
 # Búsqueda Binaria (C++)
 
-Implementación de una clase Grafo para modelar redes de datos y encontrar los caminos más cortos entre sus vertices, sea el grafo dirigido o no dirigido, haciendo uso del algoritmo de Dijkstra.
+Implementación de una clase Grafo para modelar redes de datos y encontrar los caminos más cortos entre sus vertices, sea el grafo dirigido o no dirigido, haciendo uso del algoritmo de búsqueda binaria.
 
 ## Características
  
