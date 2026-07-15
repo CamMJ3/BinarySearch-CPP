@@ -1,0 +1,43 @@
+\chapter{Análisis }
+\hypertarget{_an_xC3_xA1lisis}{}\label{_an_xC3_xA1lisis}\index{Análisis@{Análisis}}
+Reflexión teórica y Análisis comparativo del programa.\hypertarget{_an_xC3_xA1lisis_Cuestiones}{}\doxysection{\texorpdfstring{Cuestiones}{Cuestiones}}\label{_an_xC3_xA1lisis_Cuestiones}
+En este apartado se responden las siguientes cuestiones...
+
+1) Comparación entre los distintos métodos de ordenamiento vistos en clase.
+
+2) Complejidad algorítmica (O) de la búsqueda binaria.
+
+3) Casos de uso:\+ ¿\+Cuándo es preferible usar búsqueda binaria sobre búsqueda lineal?\hypertarget{_an_xC3_xA1lisis_metodos_orden}{}\doxysection{\texorpdfstring{Análisis comparativo:\+ Métodos de ordenamiento}{Análisis comparativo:\+ Métodos de ordenamiento}}\label{_an_xC3_xA1lisis_metodos_orden}
+1) En clase se discutieron diversos métodos de ordenamiento, entre estos los métodos interativos como los algoritmos de ordenamiento de la burbuja, de selección, etcétera, además de métodos recursivos como el algoritmo de Quicksort y Mergesort.
+
+Los métodos interativos son ideales para estructuras de datos con tamaños desde pequeños a medianos debido al uso de ciclos while en sus algoritmos que les permite consumir memoria constante (misma cantidad de RAM por ejecución), sin embargo, esta misma característica los convierte en métodos ineficientes en el caso de grandes estructuras de datos en donde la cantidad de operaciones a realizar puede ser inmensa. Por ejemplo, el algoritmo de la búrbuja utiliza su ciclo while para comparar elementos adyacentes de su estructura de datos hasta alcanzar el orden correcto.
+
+
+\begin{DoxyItemize}
+\item La complejidad algorítmica de estos métodos suele ser de O(n\texorpdfstring{$^\wedge$}{\string^}2).
+\end{DoxyItemize}
+
+Por otra parte, los métodos recursivos son óptimos para estructuras de datos con tamaños desde pequeños a grandes; su recursividad les permite dividir el espacio de búsqueda fácilmente en subrangos y posteriormente ordenar los elementos de la estructura de datos en forma ascendente. Por ejemplo, el algoritmo de Quicksort divide la estructura de datos mediante la selección de un pivote y ordena los elementos menores a la derecha, mientras que coloca los elementos mayores a su derecha.
+
+
+\begin{DoxyItemize}
+\item La complejidad algorítmica de estos métodos suele ser de O(n log n).
+\end{DoxyItemize}\hypertarget{_an_xC3_xA1lisis_complej_alg}{}\doxysection{\texorpdfstring{Complejidad algorítmica:\+ Espacial y temporal}{Complejidad algorítmica:\+ Espacial y temporal}}\label{_an_xC3_xA1lisis_complej_alg}
+2) Las complejidades son...
+
+
+\begin{DoxyItemize}
+\item Búsqueda binaria de forma iterativa.
+\end{DoxyItemize}
+
+Su complejidad algorítmica promedio se categoriza como O(log n) en cuestión de tiempo y O(1) en cuestión de memoria, pues crece de forma logarítmica el tiempo de ejecución con respecto al tamaño del vector, y además, usará la misma cantidad de memoria en RAM por ejecución. En el mejor de los casos, su complejidad algorítmica temporal será O(1), lo cual es posible cuando el elemento "{}x"{} a buscar se encuentra en el medio del vector, mientras que su complejidad espacial permanecerá como O(1) al consumir memoria constante.
+
+
+\begin{DoxyItemize}
+\item Búsqueda binaria de forma recursiva.
+\end{DoxyItemize}
+
+Su complejidad algorítmica promedio se categoriza como O(log n) en cuestión de tiempo y O(log n) en cuestión de memoria, pues tanto el tiempo como la memoria utilizada en RAM crece proporcialmente al logaritmo del tamaño del vector:\+ esto se puede comprobar al tener un vector de gran tamaño, donde la cantidad de divisiones aumenta considerablemente y las llamadas a la misma función se quedan congeladas, utilizando aún más memoria. En el mejor de los casos, su complejidad algorítmica temporal será O(1), lo cual es posible cuando el elemento "{}x"{} a buscar se encuentra en el medio del vector, y complejidad espacial se convierte en O(1) al consumir memoria constante.\hypertarget{_an_xC3_xA1lisis_caso_uso}{}\doxysection{\texorpdfstring{Casos de uso:\+ Binaria o linea}{Casos de uso:\+ Binaria o linea}}\label{_an_xC3_xA1lisis_caso_uso}
+3) Es mejor aplicar el algoritmo de búsqueda binaria en casos donde el espacio de búsqueda tiene demasiados ejemplos, por ejemplo, para un vector de 15,000 elementos, los cuales deben ser ingresados de forma ascendente o ser organizados con una única procedimiento para evitar mayor gasto de memoria en RAM. Dada su complejidad temporal de O(log n), se puede saber la cantidad de operaciones que realizará aplicando un logaritmo base 2 sobre la cantidad de elementos que hay en el espacio de búsqueda:\+ si se sigue el ejemplo, para un vector de 15,000 elementos, la cantidad de operaciones a realizar se aproxima a 13.
+
+Si fuera un espacio de búsqueda pequeña, por ejemplo, de 10 elementos, entonces es más susceptible la búsqueda lineal, dada tiene complejidad espacial de O(1), donde la memoria en RAM que se utiliza por ejecución es constante. Sin embargo, su complejidad temporal es de O(n), lo que implica que el tiempo por ejecución aumenta exactamente igual al tamaño de datos y lo hace un algoritmo ineficiente para grandes cantidades de datos. 

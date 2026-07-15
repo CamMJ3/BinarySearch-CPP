@@ -1,0 +1,144 @@
+\doxysection{Busqueda\+Bin\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_busqueda_bin}{}\label{class_busqueda_bin}\index{BusquedaBin$<$ T $>$@{BusquedaBin$<$ T $>$}}
+
+
+{\ttfamily \+\#include $<$busqueda\+\_\+bin.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_busqueda_bin_a1e8a3e417fa1f9a491f7839e00e4bcdc}{Busqueda\+Bin}} (const vector$<$ T $>$ \&vec\+\_\+datos)
+\begin{DoxyCompactList}\small\item\em Inicializa un vector, o espacio de búsqueda, de n elementos. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_busqueda_bin_a0e365f2c59e2364f29b80c9627a530fa}{busca\+Iterativa}} (const T \&x) const
+\begin{DoxyCompactList}\small\item\em Realiza la búsqueda binaria de forma iterativa en todo el vector. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_busqueda_bin_a65f2b3b8a76133ee148134635b097334}{busca\+Recursiva}} (const T \&x) const
+\begin{DoxyCompactList}\small\item\em Recibe el elemento a buscar para la búsqueda binaria de forma recursiva. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Busqueda\+Bin$<$ T $>$}
+
+
+Definition at line \doxymbox{\hyperlink{busqueda__bin_8h_source_l00015}{15}} of file \doxymbox{\hyperlink{busqueda__bin_8h_source}{busqueda\+\_\+bin.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_busqueda_bin_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_busqueda_bin_a1e8a3e417fa1f9a491f7839e00e4bcdc}\index{BusquedaBin$<$ T $>$@{BusquedaBin$<$ T $>$}!BusquedaBin@{BusquedaBin}}
+\index{BusquedaBin@{BusquedaBin}!BusquedaBin$<$ T $>$@{BusquedaBin$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BusquedaBin()}{BusquedaBin()}}
+{\footnotesize\ttfamily \label{class_busqueda_bin_a1e8a3e417fa1f9a491f7839e00e4bcdc} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{class_busqueda_bin}{Busqueda\+Bin}}$<$ T $>$::\+\+Busqueda\+Bin (\begin{DoxyParamCaption}\item[{const vector$<$ T $>$ \&}]{vec\+\_\+datos}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa un vector, o espacio de búsqueda, de n elementos. 
+
+Copia los datos recibidos del vector obtenido del usuario en el vector, o espacio de búsqueda, interno. 
+\begin{DoxyParams}{Parameters}
+{\em vec\+\_\+datos} & Apuntador al vector obtenido del usuario. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{busqueda__bin_8cpp_source_l00060}{60}} of file \doxymbox{\hyperlink{busqueda__bin_8cpp_source}{busqueda\+\_\+bin.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ estruct\_datos\ =\ \doxymbox{\hyperlink{class_busqueda_bin}{vec\_datos}};}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_busqueda_bin_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_busqueda_bin_a0e365f2c59e2364f29b80c9627a530fa}\index{BusquedaBin$<$ T $>$@{BusquedaBin$<$ T $>$}!buscaIterativa@{buscaIterativa}}
+\index{buscaIterativa@{buscaIterativa}!BusquedaBin$<$ T $>$@{BusquedaBin$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buscaIterativa()}{buscaIterativa()}}
+{\footnotesize\ttfamily \label{class_busqueda_bin_a0e365f2c59e2364f29b80c9627a530fa} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_busqueda_bin}{Busqueda\+Bin}}$<$ T $>$::\+busca\+Iterativa (\begin{DoxyParamCaption}\item[{const T \&}]{x}{}\end{DoxyParamCaption}) const}
+
+
+
+Realiza la búsqueda binaria de forma iterativa en todo el vector. 
+
+Primero, delimita el espacio de búsqueda en el primer (low) y último (high) elemento del vector, y despúes lo divide en dos mitades usando la fórmula "{}low + (high -\/ low) /\+ 2"{} para encontrar el índice central sin riesgo de que se presente un desbordamiento (overflow). Posteriormente, pregunta si el número en el índice central es igual al número "{}x"{} que se busca.
+
+Si es mayor, se dirige al subrango derecho, y si es menor, al izquierdo. Nuevamente, encuentra la mitad del subrango, y repite el proceso de búsqueda binaria. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Elemento en el vector a buscar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{busqueda__bin_8cpp_source_l00081}{81}} of file \doxymbox{\hyperlink{busqueda__bin_8cpp_source}{busqueda\+\_\+bin.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_busqueda_bin}{low}}\ =\ 0;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_busqueda_bin}{high}}\ =\ estruct\_datos.size()\ -\/\ 1;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{while}\ (\doxymbox{\hyperlink{class_busqueda_bin}{low}}\ <=\ \doxymbox{\hyperlink{class_busqueda_bin}{high}})}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_busqueda_bin}{mid}}\ =\ \doxymbox{\hyperlink{class_busqueda_bin}{low}}\ +\ (\doxymbox{\hyperlink{class_busqueda_bin}{high}}\ -\/\ \doxymbox{\hyperlink{class_busqueda_bin}{low}})\ /\ 2;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (estruct\_datos[\doxymbox{\hyperlink{class_busqueda_bin}{mid}}]\ ==\ \doxymbox{\hyperlink{class_busqueda_bin}{x}})}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_busqueda_bin}{mid}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (estruct\_datos[\doxymbox{\hyperlink{class_busqueda_bin}{mid}}]\ <\ \doxymbox{\hyperlink{class_busqueda_bin}{x}})}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_busqueda_bin}{low}}\ =\ \doxymbox{\hyperlink{class_busqueda_bin}{mid}}\ +\ 1;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_busqueda_bin}{high}}\ =\ \doxymbox{\hyperlink{class_busqueda_bin}{mid}}\ -\/\ 1;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_busqueda_bin_a65f2b3b8a76133ee148134635b097334}\index{BusquedaBin$<$ T $>$@{BusquedaBin$<$ T $>$}!buscaRecursiva@{buscaRecursiva}}
+\index{buscaRecursiva@{buscaRecursiva}!BusquedaBin$<$ T $>$@{BusquedaBin$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buscaRecursiva()}{buscaRecursiva()}}
+{\footnotesize\ttfamily \label{class_busqueda_bin_a65f2b3b8a76133ee148134635b097334} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{class_busqueda_bin}{Busqueda\+Bin}}$<$ T $>$::\+busca\+Recursiva (\begin{DoxyParamCaption}\item[{const T \&}]{x}{}\end{DoxyParamCaption}) const}
+
+
+
+Recibe el elemento a buscar para la búsqueda binaria de forma recursiva. 
+
+A partir del número obtenido del usuario, se utiliza la función privada de búsqueda binaria recursiva para calcular, automáticamente, los índices de low y high. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Elemento en el vector a buscar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{busqueda__bin_8cpp_source_l00117}{117}} of file \doxymbox{\hyperlink{busqueda__bin_8cpp_source}{busqueda\+\_\+bin.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return}\ busquedaRecursiva(\doxymbox{\hyperlink{class_busqueda_bin}{x}},\ 0,\ estruct\_datos.size()\ -\/\ 1);}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+headers/\+\doxymbox{\hyperlink{busqueda__bin_8h}{busqueda\+\_\+bin.\+h}}\item 
+src/\+\doxymbox{\hyperlink{busqueda__bin_8cpp}{busqueda\+\_\+bin.\+cpp}}\end{DoxyCompactItemize}

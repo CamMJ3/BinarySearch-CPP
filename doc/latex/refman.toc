@@ -1,0 +1,50 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Búsqueda Binaria (C++) }{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Características}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Estructura del proyecto}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Documentación}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Ejecución}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Autora}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Maestro}{2}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Materia y Programa Académico}{2}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Fecha}{2}{section.1.8}%
+\contentsline {chapter}{\numberline {2}Análisis }{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Cuestiones}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Análisis comparativo:\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{} Métodos de ordenamiento}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Complejidad algorítmica:\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{} Espacial y temporal}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Casos de uso:\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{} Binaria o linea}{4}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Pruebas }{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Resultados de Pruebas}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Bibliografía }{9}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Directory Hierarchy}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Directories}{11}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Class Index}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Class List}{13}{section.6.1}%
+\contentsline {chapter}{\numberline {7}File Index}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}File List}{15}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Directory Documentation}{17}{chapter.8}%
+\contentsline {section}{\numberline {8.1}headers Directory Reference}{17}{section.8.1}%
+\contentsline {section}{\numberline {8.2}src Directory Reference}{17}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Class Documentation}{19}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Busqueda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bin$<$ T $>$ Class Template Reference}{19}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Detailed Description}{19}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Constructor \& Destructor Documentation}{19}{subsection.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.1.2.1}BusquedaBin()}{19}{subsubsection.9.1.2.1}%
+\contentsline {subsection}{\numberline {9.1.3}Member Function Documentation}{20}{subsection.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.1.3.1}buscaIterativa()}{20}{subsubsection.9.1.3.1}%
+\contentsline {subsubsection}{\numberline {9.1.3.2}buscaRecursiva()}{21}{subsubsection.9.1.3.2}%
+\contentsline {chapter}{\numberline {10}File Documentation}{23}{chapter.10}%
+\contentsline {section}{\numberline {10.1}headers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}busqueda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bin.h File Reference}{23}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Detailed Description}{23}{subsection.10.1.1}%
+\contentsline {section}{\numberline {10.2}busqueda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bin.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.10.2}%
+\contentsline {section}{\numberline {10.3}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{24}{section.10.3}%
+\contentsline {section}{\numberline {10.4}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}busqueda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bin.cpp File Reference}{24}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Detailed Description}{24}{subsection.10.4.1}%
+\contentsline {section}{\numberline {10.5}busqueda\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bin.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{24}{section.10.5}%
+\contentsline {section}{\numberline {10.6}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.cpp File Reference}{25}{section.10.6}%
+\contentsline {subsection}{\numberline {10.6.1}Detailed Description}{25}{subsection.10.6.1}%
+\contentsline {subsection}{\numberline {10.6.2}Function Documentation}{26}{subsection.10.6.2}%
+\contentsline {subsubsection}{\numberline {10.6.2.1}main()}{26}{subsubsection.10.6.2.1}%
+\contentsline {subsubsection}{\numberline {10.6.2.2}menu()}{27}{subsubsection.10.6.2.2}%
+\contentsline {section}{\numberline {10.7}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{27}{section.10.7}%
+\contentsline {chapter}{Index}{31}{section*.10}%

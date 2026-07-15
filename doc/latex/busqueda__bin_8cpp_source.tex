@@ -1,0 +1,88 @@
+\doxysection{busqueda\+\_\+bin.\+cpp}
+\hypertarget{busqueda__bin_8cpp_source}{}\label{busqueda__bin_8cpp_source}\index{src/busqueda\_bin.cpp@{src/busqueda\_bin.cpp}}
+\doxymbox{\hyperlink{busqueda__bin_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{busqueda__bin_8h}{busqueda\_bin.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00009}00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00011}00011\ \textcolor{comment}{/***********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00027}00027\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00028}00028\ \textcolor{keywordtype}{int}\ BusquedaBin<T>::busquedaRecursiva(\textcolor{keyword}{const}\ T\&\ x,\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00029}00029\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (low\ >\ high)}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{int}\ mid\ =\ low\ +\ (high\ -\/\ low)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (estruct\_datos[mid]\ ==\ x)}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mid;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (estruct\_datos[mid]\ <\ x)}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ busquedaRecursiva(x,\ mid\ +\ 1,\ high);}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ busquedaRecursiva(x,\ low,\ mid\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00051}00051\ \textcolor{comment}{/***********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00059}00059\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00060}\doxymbox{\hyperlink{class_busqueda_bin_a1e8a3e417fa1f9a491f7839e00e4bcdc}{00060}}\ \doxymbox{\hyperlink{class_busqueda_bin_a1e8a3e417fa1f9a491f7839e00e4bcdc}{BusquedaBin<T>::BusquedaBin}}(\textcolor{keyword}{const}\ vector<T>\&\ vec\_datos)}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00062}00062\ \ \ \ \ estruct\_datos\ =\ vec\_datos;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00065}00065\ \textcolor{comment}{/***********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00080}00080\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00081}\doxymbox{\hyperlink{class_busqueda_bin_a0e365f2c59e2364f29b80c9627a530fa}{00081}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_busqueda_bin_a0e365f2c59e2364f29b80c9627a530fa}{BusquedaBin<T>::buscaIterativa}}(\textcolor{keyword}{const}\ T\&\ x)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00082}00082\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{int}\ low\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{int}\ high\ =\ estruct\_datos.size()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{while}\ (low\ <=\ high)}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mid\ =\ low\ +\ (high\ -\/\ low)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (estruct\_datos[mid]\ ==\ x)}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mid;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (estruct\_datos[mid]\ <\ x)}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ low\ =\ mid\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ high\ =\ mid\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00107}00107\ \textcolor{comment}{/***********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00116}00116\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00117}\doxymbox{\hyperlink{class_busqueda_bin_a65f2b3b8a76133ee148134635b097334}{00117}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_busqueda_bin_a65f2b3b8a76133ee148134635b097334}{BusquedaBin<T>::buscaRecursiva}}(\textcolor{keyword}{const}\ T\&\ x)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00118}00118\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00119}00119\ \ \ \ \ \textcolor{keywordflow}{return}\ busquedaRecursiva(x,\ 0,\ estruct\_datos.size()\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00120}00120\ \}}
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{busqueda__bin_8cpp_source_l00122}00122\ \textcolor{comment}{/***********************************************************************/}}
+
+\end{DoxyCode}

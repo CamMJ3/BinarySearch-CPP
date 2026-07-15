@@ -1,0 +1,49 @@
+\begin{theindex}
+
+  \item {Análisis}, \hyperpage{3}
+
+  \indexspace
+
+  \item {Bibliografía}, \hyperpage{9}
+  \item {buscaIterativa}
+    \subitem {BusquedaBin$<$ T $>$}, \hyperpage{20}
+  \item {buscaRecursiva}
+    \subitem {BusquedaBin$<$ T $>$}, \hyperpage{20}
+  \item {BusquedaBin}
+    \subitem {BusquedaBin$<$ T $>$}, \hyperpage{19}
+  \item {BusquedaBin$<$ T $>$}, \hyperpage{19}
+    \subitem {buscaIterativa}, \hyperpage{20}
+    \subitem {buscaRecursiva}, \hyperpage{20}
+    \subitem {BusquedaBin}, \hyperpage{19}
+  \item {Búsqueda Binaria (C++)}, \hyperpage{1}
+
+  \indexspace
+
+  \item {headers Directory Reference}, \hyperpage{17}
+  \item {headers/busqueda\_bin.h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{26}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{26}
+    \subitem {menu}, \hyperpage{27}
+  \item {menu}
+    \subitem {main.cpp}, \hyperpage{27}
+
+  \indexspace
+
+  \item {Pruebas}, \hyperpage{5}
+
+  \indexspace
+
+  \item {README.md}, \hyperpage{24}
+
+  \indexspace
+
+  \item {src Directory Reference}, \hyperpage{17}
+  \item {src/busqueda\_bin.cpp}, \hyperpage{24}
+  \item {src/main.cpp}, \hyperpage{25}, \hyperpage{27}
+
+\end{theindex}
